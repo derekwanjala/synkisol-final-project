@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block title %} {{service.title}} {% endblock %}
+{% block keywords %} {{ company.keywords }} {% endblock %}
+{% block description %} {{ company.description }} {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<!-- Banner Section -->
+        <section class="page-banner">
+            <div class="image-layer" style="background-image:url({% static 'images/background/image-7.jpg' %});"></div>
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
+            <div class="banner-inner">
+                <div class="auto-container">
+                    <div class="inner-container clearfix">
+                        <h1>{{service.title}}</h1>
+                        <div class="page-nav">
+                            <ul class="bread-crumb clearfix">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li class="active">{{service.title}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Banner Section -->
+
+        <div class="sidebar-page-container">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!--Content Side-->
+                    <div class="content-side col-lg-8 col-md-12 col-sm-12">
+                        <div class="service-details">
+                            <div class="main-image image">
+                                <img src="{{service.image.url}}" alt="{{service.alt}}">
+                            </div>
+                            <div class="text-content">
+                                <h3>{{service.title}}</h3>
+                                <p>{{service.detail | safe}}</p> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Sidebar Side-->
+                    <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
+                        <aside class="sidebar blog-sidebar">
+
+                            <!-- <div class="sidebar-widget services">
+                                <div class="widget-inner">
+                                    <div class="sidebar-title">
+                                        <h4>All Services</h4>
+                                    </div>
+                                    <ul>
+                                        <li><a href="web-development.html">Website Development</a></li>
+                                        <li><a href="graphic-designing.html">Graphic Designing</a></li>
+                                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                                        <li><a href="seo.html">SEO & Content Writting</a></li>
+                                        <li><a href="app-development.html">App Development</a></li>
+                                        <li><a href="ui-designing.html">UI/UX Designing</a></li>
+                                    </ul>
+                                </div>
+                            </div> -->
+
+                            <div class="sidebar-widget call-up">
+                                <div class="widget-inner">
+                                    <div class="sidebar-title">
+                                        <h4>need of our help?</h4>
+                                    </div>
+                                    <div class="text">You can contact our offices, and we will assist you.</div>
+                                    <div class="phone"><a href="tel:+254742690110"><span
+                                                class="icon flaticon-call"></span>+254 742 690 110</a></div>
+                                </div>
+                            </div>
+
+
+                        </aside>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Call To Section -->
+        <section class="call-to-section-two alternate">
+            <div class="auto-container">
+                <div class="inner clearfix">
+                    <h2>We&#39;re Ready to Bring Bigger <br>& Stronger Projects</h2>
+                    <div class="link-box">
+                        <a class="theme-btn btn-style-two" href="#">
+                            <i class="btn-curve"></i>
+                            <span class="btn-title">Contact with us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

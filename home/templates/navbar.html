@@ -1,0 +1,57 @@
+{% load static %}
+
+<nav class="mainmenu-eight main-header">
+    <div class="auto-container">
+        <div class="nav-outer mainmenu-eight__inner ">
+            <div class="mainmenu-eight__left">
+                <a href="index.html">
+                    <img src="{% static 'images/update-01-10-2021/synkisol-logo.png' %}" height="50px" width="300px"
+                        alt="Synkisol Synergy Solution Logo">
+                </a>
+                <div class="mobile-nav-toggler"><span class="icon flaticon-menu-2"></span><span
+                        class="txt">Menu</span></div>
+
+            </div><!-- /.mainmenu-eight__left -->
+            <nav class="main-menu navbar-expand-md navbar-light">
+                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                    <ul class="navigation clearfix">
+                        <li><a href="index.html">Home</a>
+                        </li>
+                        <li><a href="about.html">About</a>
+                        </li>
+                        <li class="dropdown"><a href="services.html">Services</a>
+                            <ul>
+                                {% for rs in services %}
+                                <li><a href="{{ rs.get_absolute_url }}">{{ rs.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <li><a href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li><a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="mainmenu-eight__right">
+                <!-- <div class="search-btn mainmenu-eight__search">
+                    <button type="button" class="theme-btn search-toggler"><span
+                            class="flaticon-magnifying-glass"></span></button>
+                </div> -->
+
+                <a href="tel:+254742690110" class="mainmenu-eight__call">
+                    <span class="mainmenu-eight__call__icon">
+                        <i class="flaticon-phone"></i>
+                    </span><!-- /.mainmenu-eight__call__icon -->
+                    <span class="mainmenu-eight__call__text">
+                        Have any questions? <br>
+                        Free: <strong>+254 742 690 110</strong>
+                    </span><!-- /.mainmenu-eight__call__text -->
+                </a>
+
+            </div><!-- /.mainmenu-eight__right -->
+        </div><!-- /.mainmenu-eight__inner -->
+    </div><!-- /.auto-container -->
+</nav><!-- /.mainmenu-eight -->
+</header><!-- /.header-eight -->

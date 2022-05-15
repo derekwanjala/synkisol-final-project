@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ project.title }} {% endblock %}
+{% block keywords %} Project Details Keywords {% endblock %}
+{% block description %} Project Details Description {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<!-- Banner Section -->
+<section class="page-banner">
+    <div class="image-layer" style="background-image:url({% static 'images/background/image-7.jpg' %});"></div>
+    <div class="shape-1"></div>
+    <div class="shape-2"></div>
+    <div class="banner-inner">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <h1>Portfolio</h1>
+                <div class="page-nav">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li class="active">{{project.title}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Banner Section -->
+
+<!-- Project Single -->
+<section class="project-single style-two">
+    <div class="auto-container">
+        <figure class="image-box">
+            <a href="{{ project.image.url }}" class="lightbox-image" data-fancybox="gallery"><img
+                    src="{{ project.image.url }}" alt="{{ project.alt }}"></a>
+        </figure>
+        <div class="text-content">
+            <div class="row clearfix">
+                <!-- Text COl -->
+                <div class="text-col col-lg-8 col-md-12 col-sm-12">
+                    <div class="inner">
+                        <h5>{{ project.title }}</h5>
+                        <p>{{ project.detail }}</p>
+                    </div>
+                </div>
+                <!-- Text COl -->
+                <div class="text-col col-lg-4 col-md-12 col-sm-12">
+                    <div class="inner">
+                        <ul class="info">
+                            <li><strong>Clients:</strong> <br>{{ project.client }}</li>
+                            <li><strong>Category:</strong> <br>{{ project.service }}</li>
+                            <li><strong>Date:</strong> <br>{{ project.launched }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio-details-video">
+    <div class="auto-container">
+        <!-- <div class="portfolio-details-video__thumbnail">
+            <img src="{% static 'images/update-26-02-2021/resources/portfolio-d-video-1.jpg' %}" alt="">
+            <div class="vid-link">
+                <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="lightbox-image">
+                    <div class="icon"><span class="flaticon-play-button-1"></span><i class="ripple"></i></div>
+                </a>
+            </div>
+        </div> -->
+    </div><!-- /.auto-container -->
+</section><!-- /.portfolio-details-video -->
+
+<!-- <section class="portfolio-details-summery">
+    <div class="auto-container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="portfolio-details-summery__heading">Conclusion</h3>
+                
+                <p class="portfolio-details-summery__text">
+                    Tincidunt elit magnis nulla facilisis sagittis sapien in nunc amet ultrices dolores sit
+                    ipsum velit quet massa fringilla leo orci nc amet ultrices, dolores sit ipsum velit massa
+                    fringilla leo.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="portfolio-details-summery__heading">result</h3>
+                
+                <p class="portfolio-details-summery__text">
+                    Tincidunt elit magnis nulla facilisis sagittis sapien in nunc amet ultrices dolores sit
+                    ipsum velit quet massa fringilla leo orci nc amet ultrices, dolores sit ipsum velit massa
+                    fringilla leo.
+                </p>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<div class="post-control">
+    <div class="auto-container">
+        <div class="inner clearfix">
+            <div class="control prev"><a href="#"><span class="fa fa-angle-left"></span> &nbsp; Previous</a>
+            </div>
+            <div class="control next"><a href="#">Next &nbsp;<span class="fa fa-angle-right"></span></a></div>
+        </div>
+    </div>
+</div>
+
+<!-- Similar Section -->
+<!-- <section class="gallery-section similar-gallery">
+    <div class="auto-container">
+        <div class="sec-title centered">
+            <h2>Similar work<span class="dot">.</span></h2>
+        </div>
+        <div class="row clearfix">
+            
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <figure class="image"><img src="images/gallery/4.jpg" alt=""></figure>
+                    <a href="images/gallery/4.jpg" class="lightbox-image overlay-box" data-fancybox="gallery"></a>
+                    <div class="cap-box">
+                        <div class="cap-inner">
+                            <div class="cat"><span>Graphic</span></div>
+                            <div class="title">
+                                <h5><a href="portfolio-single.html">Fimlor Experience</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <figure class="image"><img src="images/gallery/5.jpg" alt=""></figure>
+                    <a href="images/gallery/5.jpg" class="lightbox-image overlay-box" data-fancybox="gallery"></a>
+                    <div class="cap-box">
+                        <div class="cap-inner">
+                            <div class="cat"><span>Graphic</span></div>
+                            <div class="title">
+                                <h5><a href="portfolio-single.html">Fimlor Experience</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box">
+                    <figure class="image"><img src="images/gallery/6.jpg" alt=""></figure>
+                    <a href="images/gallery/6.jpg" class="lightbox-image overlay-box" data-fancybox="gallery"></a>
+                    <div class="cap-box">
+                        <div class="cap-inner">
+                            <div class="cat"><span>Graphic</span></div>
+                            <div class="title">
+                                <h5><a href="portfolio-single.html">Fimlor Experience</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section> -->
+
+{% endblock %}
