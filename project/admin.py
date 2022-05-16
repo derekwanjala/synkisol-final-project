@@ -8,7 +8,7 @@ class ProductImageInline(admin.TabularInline):
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ['title', 'service', 'status']
+    list_display = ['title', 'service', 'status', 'image_tag']
     list_filter = ['service']
     readonly_fields = ['image_tag']
     inlines = [ProductImageInline]

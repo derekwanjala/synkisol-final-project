@@ -1,0 +1,397 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ company.title }} {% endblock %}
+{% block keywords %} {{ company.keywords }} {% endblock %}
+{% block description %} {{ company.description }} {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<section class="slider-eight">
+    <div class="swiper-container thm-swiper__slider"
+        data-swiper-options='{"slidesPerView": 1, "loop": true, "effect": "fade", "pagination": { "el": "#main-slider-pagination", "type": "bullets", "clickable": true }, "autoplay": { "delay": 5000 }}'>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="image-layer"
+                    style="background-image: url({% static 'images/update-01-10-2021/slider/slider-eight-1-1.jpg' %});">
+                </div>
+                <!-- /.image-layer -->
+                <div class="auto-container">
+                    <div class="slider-eight__content">
+                        <p class="slider-eight__text"><span>Synkisol Synergy Solution Limited</span></p>
+                        <!-- /.slider-eight__text -->
+                        <h2 class="slider-eight__title">Commercial Kitchen Equipment Supplier in Kenya.</h2>
+                        <!-- /.slider-eight__title -->
+                        <div class="slider-eight__btns">
+                            <!-- <a href="#" class="slider-eight__btn thm-btn__eight">Case Studies</a> -->
+                            <!-- /.thm-btn__eight -->
+                            <a href="#" class="slider-eight__btn slider-eight__btn--two thm-btn__eight">Book A Free Consultation</a>
+                            <!-- /.thm-btn__eight -->
+                        </div><!-- /.slider-eight__btns -->
+
+                    </div><!-- /.slider-eight__content -->
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image-layer"
+                    style="background-image: url({% static 'images/update-01-10-2021/slider/slider-eight-1-2.jpg' %});">
+                </div>
+                <!-- /.image-layer -->
+                <div class="auto-container">
+                    <div class="slider-eight__content">
+                        <p class="slider-eight__text"><span>Synkisol Synergy Solution Limited</span></p>
+                        <!-- /.slider-eight__text -->
+                        <h2 class="slider-eight__title">Commercial Kitchen Equipment Supplier in Kenya.</h2>
+                        <!-- /.slider-eight__title -->
+                        <div class="slider-eight__btns">
+                            <!-- <a href="#" class="slider-eight__btn thm-btn__eight">Case Studies</a> -->
+                            <!-- /.thm-btn__eight -->
+                            <a href="#" class="slider-eight__btn slider-eight__btn--two thm-btn__eight">Book A Free Consultation</a>
+                            <!-- /.thm-btn__eight -->
+                        </div><!-- /.slider-eight__btns -->
+
+                    </div><!-- /.slider-eight__content -->
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- /.slider-six -->
+
+<!-- Funfacts Section -->
+<section class="facts-section alternate">
+    <div class="auto-container">
+        <div class="inner-container">
+
+            <!-- Fact Counter -->
+            <div class="fact-counter">
+                <div class="row clearfix">
+
+                    <!--Column-->
+                    <div class="column counter-column col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner">
+                            <div class="content">
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="4000" data-stop="250">0</span>
+                                </div>
+                                <div class="counter-title">Projects Completed</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Column-->
+                    <div class="column counter-column col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner">
+                            <div class="content">
+                                <div class="count-outer count-box alternate">
+                                    <span class="count-text" data-speed="3000" data-stop="150">0</span>
+                                </div>
+                                <div class="counter-title">Active clients</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Column-->
+                    {% comment %} <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner">
+                            <div class="content">
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="3000" data-stop="626">0</span>
+                                </div>
+                                <div class="counter-title">cups of coffee</div>
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+
+                    <!--Column-->
+                    <div class="column counter-column col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner">
+                            <div class="content">
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="4000" data-stop="275">0</span>
+                                </div>
+                                <div class="counter-title">happy clients</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End Funfacts Section -->
+
+<!--Services Section-->
+<section class="services-section-two">
+    <div class="auto-container">
+        <div class="sec-title">
+            <!--Title Block-->
+            <div class="row clearfix">
+                <div class="column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <h2>LET&#39;S CREATE SOMETHING <br>together<span class="dot">.</span></h2>
+                </div>
+                <div class="column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="lower-text">There are many variations of passages of Lorem Ipsum available, but
+                        the majority have suffered alteration in some form, by injected humour, or randomised.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services">
+            <div class="row clearfix">
+                <!--Service Block-->
+                {% for rs in service %}
+                <div class="service-block-two col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="bottom-curve"></div>
+                        <div class="icon-box"><span class="flaticon-vector"></span></div>
+                        <h5><a href="{% url 'service_detail' rs.slug %}">{{ rs.title }}</a></h5>
+                        <div class="text">{{ rs.short_detail }}</div>
+                        <div class="link-box"><a href="#"><span class="fa fa-angle-right"></span></a></div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Featured Section-->
+<section class="featured-section">
+    <div class="auto-container">
+        {% for rs in about %}
+        <div class="row clearfix">
+            <!--Left Column-->
+            <div class="left-col col-lg-6 col-md-12 col-sm-12">
+                <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="image-box"><img src="{{ rs.image.url }}" alt="{{ rs.alt }}"></div>
+                </div>
+            </div>
+            <!--Right Column-->
+            <div class="right-col col-lg-6 col-md-12 col-sm-12">
+                <div class="inner">
+                    <div class="sec-title">
+                        <h2>{{ rs.title }}<span class="dot">.</span></h2>
+                        <div class="lower-text">{{ rs.short_detail }}</div>
+                    </div>
+                    {% comment %} <div class="features">
+                        <div class="row clearfix">
+                            <div class="feature col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <h6>Free Consultation</h6>
+                                    <div class="text">Lorem ipsum is not dolor sit amet, consectetur notted.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feature col-md-6 col-sm-12">
+                                <div class="inner-box">
+                                    <h6>Best team members</h6>
+                                    <div class="text">Lorem ipsum is not dolor sit amet, consectetur notted.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- call to action -->
+<section class="call-to-section-three jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% 80%">
+    <img src="{% static 'images/update-1-12-2020/background/call-bg-1-1.jpg' %}" class="jarallax-img" alt="">
+    <div class="auto-container">
+        <h3>We&#39;re Helping Over 150 Businesses</h3>
+        <div class="button-wrap">
+            <a href="#" class="theme-btn btn-style-three">Contact Us for a Free Consultation</a>
+            <!-- /.theme-btn button-style-three -->
+        </div><!-- /.button-wrap -->
+    </div><!-- /.auto-container -->
+</section><!-- /.call-to-section-three -->
+
+<!-- gallery section -->
+<section class="gallery-block-three">
+    <div class="auto-container">
+        <div class="sec-title-two text-center">
+            <p>What We did</p>
+            <h2>Latest Projects</h2>
+        </div><!-- /.sec-title-two -->
+        <div class="row">
+            {% for rs in projects %}
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="gallery-item-three">
+                    <img src="{{rs.image.url}}" alt="{{rs.alt}}">
+                    <div class="gallery-item-three__content">
+                        <p>{{rs.service}}</p>
+                        <h3><a href="{{ rs.get_absolute_url }}">{{rs.title}}</a></h3>
+                    </div><!-- /.gallery-item-three__content -->
+                </div><!-- /.gallery-item-three -->
+            </div><!-- /.col-sm-12 col-md-6 col-lg-4 -->
+            {% endfor %}
+        </div><!-- /.row -->
+    </div><!-- /.auto-container -->
+</section><!-- /.gallery-block-three -->
+
+
+<!-- testimonials section -->
+<!-- <section class="testi-block-three">
+    <div class="auto-container">
+        <div class="sec-title-two text-center">
+            <p>Client Testimonials</p>
+            <h2>What They’re Saying</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-4">
+                <div class="testi-block-three__single">
+                    <div class="testi-block-three__top">
+                        <p>There are many variations of passages of lorem ipsum but the majority have alteration
+                            in some form, by injected randomised words look.</p>
+                    </div>
+                    <img src="images/update-1-12-2020/resources/testi-1-1.png" alt="">
+                    <h3>Mike Hardson</h3>
+                    <span>customer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="video-seven">
+    <div class="video-seven__parallax  jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% 80%">
+        <img src="{% static 'images/update-01-10-2021/background/video-seven-1-1.jpg' %}" class="jarallax-img" alt="">
+    </div>
+    <div class="auto-container">
+        <h3 class="video-seven__title">Mission is to Protect Your
+            Business & More</h3>
+        <a href="https://www.youtube.com/" class="video-seven__btn lightbox-image">
+            <i class="fa fa-play"></i>
+            <i class="ripple"></i></a>
+    </div><!-- /.auto-container -->
+</section><!-- /.video-seven -->
+
+<!--Get Quote Section-->
+<section class="get-quote-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--Left Column-->
+            <div class="left-col col-xl-8 col-lg-12 col-md-12 col-sm-12">
+                <div class="inner">
+                    <div class="featured-block clearfix">
+                        <div class="image"><img src="{% static 'images/resource/featured-image-9.jpg' %}" alt=""></div>
+                        <h4>our Values & Strategy</h4>
+                        <div class="text">Lorem Ipsum is simply proin gravida nibh vel velit auctor aliquet.
+                            Aenean sollicitudin, lorem is simply free text quis bibendum.</div>
+                    </div>
+                    <div class="counter">
+                        <div class="counter-inner clearfix">
+                            <div class="counter-text">
+                                <div class="count-box"><span class="count-text" data-stop="345600"
+                                        data-speed="2500">0</span></div>
+                                <div class="counter-title">projects was completed successfully</div>
+                            </div>
+                            <div class="counter-image"><img src="images/resource/featured-image-10.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Right Column-->
+            <div class="right-col col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                <div class="inner">
+                    <div class="form-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="default-form">
+                            <h4>Get a free quote <span>.</span></h4>
+                            <form method="post" action="http://layerdrops.com/linoor/contact.html">
+                                <div class="form-group">
+                                    <div class="field-inner">
+                                        <input type="text" name="username" value="" placeholder="Your Name"
+                                            required="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="field-inner">
+                                        <input type="email" name="email" value="" placeholder="Email Address"
+                                            required="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="field-inner">
+                                        <input type="text" name="phone" value="" placeholder="Phone Number"
+                                            required="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="field-inner">
+                                        <select class="custom-select-box">
+                                            <option>Choose Service</option>
+                                            <option>Website Development</option>
+                                            <option>Graphic Designing</option>
+                                            <option>Digital Marketing</option>
+                                            <option>App Development</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="theme-btn btn-style-one">
+                                        <i class="btn-curve"></i>
+                                        <span class="btn-title">Request a quote</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="sponsor-eight">
+    <div class="auto-container">
+        <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
+            "0": {
+                "spaceBetween": 30,
+                "slidesPerView": 2
+            },
+            "375": {
+                "spaceBetween": 30,
+                "slidesPerView": 2
+            },
+            "575": {
+                "spaceBetween": 30,
+                "slidesPerView": 3
+            },
+            "767": {
+                "spaceBetween": 50,
+                "slidesPerView": 4
+            },
+            "991": {
+                "spaceBetween": 50,
+                "slidesPerView": 5
+            },
+            "1199": {
+                "spaceBetween": 100,
+                "slidesPerView": 5
+            }
+        }}'>
+            <div class="swiper-wrapper">
+                {% for rs in clients %}
+                <div class="swiper-slide">
+                    <img src="{{rs.image.url}}" alt="{{rs.alt}}">
+                </div><!-- /.swiper-slide -->
+                {% endfor %}
+            </div> 
+        </div>
+    </div><!-- /.auto-container -->
+</section><!-- /.sponsor-eight -->
+
+{% endblock %}

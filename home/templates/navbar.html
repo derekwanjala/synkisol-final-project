@@ -4,7 +4,7 @@
     <div class="auto-container">
         <div class="nav-outer mainmenu-eight__inner ">
             <div class="mainmenu-eight__left">
-                <a href="index.html">
+                <a href="{% url 'home:home' %}">
                     <img src="{% static 'images/update-01-10-2021/synkisol-logo.png' %}" height="50px" width="300px"
                         alt="Synkisol Synergy Solution Logo">
                 </a>
@@ -15,18 +15,18 @@
             <nav class="main-menu navbar-expand-md navbar-light">
                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                     <ul class="navigation clearfix">
-                        <li><a href="index.html">Home</a>
+                        <li><a href="{% url 'home:home' %}">Home</a>
                         </li>
-                        <li><a href="about.html">About</a>
+                        <li><a href="{% url 'about' %}">About</a>
                         </li>
-                        <li class="dropdown"><a href="services.html">Services</a>
-                            <ul>
-                                {% for rs in services %}
-                                <li><a href="{{ rs.get_absolute_url }}">{{ rs.title }}</a></li>
-                                {% endfor %}
-                            </ul>
+                        <li class="dropdown"><a href="{% url 'service' %}">Services</a>
+                            {% comment %} <ul>
+                            {% for rs in service %}
+                                <li><a href="{% url 'service_detail' rs.slug %}">{{ rs.title| title }}</a></li>
+                            {% endfor %}
+                            </ul> {% endcomment %}
                         </li>
-                        <li><a href="portfolio.html">Portfolio</a>
+                        <li><a href="{% url 'project:all_projects' %}">Portfolio</a>
                         </li>
                         <li><a href="contact.html">Contact</a>
                         </li>

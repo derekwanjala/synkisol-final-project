@@ -10,6 +10,7 @@ urlpatterns = [
     path('', include('home.urls', namespace='home')),
     path('project/', include('project.urls', namespace='project')),
 
+    path('about', views.about, name='about'),
     path('service', views.service, name='service'),    
     path('<slug:slug>/', views.ServiceDetail.as_view(), name='service_detail'),
 ]

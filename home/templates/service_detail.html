@@ -19,8 +19,8 @@
                         <h1>{{service.title}}</h1>
                         <div class="page-nav">
                             <ul class="bread-crumb clearfix">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Services</a></li>
+                                <li><a href="{% url 'home:home' %}">Home</a></li>
+                                <li><a href="{% url 'service' %}">Services</a></li>
                                 <li class="active">{{service.title}}</li>
                             </ul>
                         </div>

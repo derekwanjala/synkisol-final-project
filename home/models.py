@@ -20,7 +20,6 @@ class Company(models.Model):
     instagram = models.CharField(blank=True,max_length=50)
     twitter = models.CharField(blank=True,max_length=50)
     youtube = models.CharField(blank=True, max_length=50)
-    contact = models.CharField(max_length=250)
     status=models.CharField(max_length=10,choices=STATUS)
     created=models.DateTimeField(auto_now_add=True)
     updated=models.DateTimeField(auto_now=True)

@@ -1,0 +1,260 @@
+{% extends 'base.html' %}
+
+{% block title %} About {% endblock %}
+{% block keywords %} {{ company.keywords }} {% endblock %}
+{% block description %} {{ company.description }} {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+        <!-- Banner Section -->
+        <section class="page-banner">
+            <div class="image-layer" style="background-image:url({% static 'images/background/image-7.jpg' %});"></div>
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
+            <div class="banner-inner">
+                <div class="auto-container">
+                    <div class="inner-container clearfix">
+                        <h1>About</h1>
+                        <div class="page-nav">
+                            <ul class="bread-crumb clearfix">
+                                <li><a href="{% url 'home:home' %}">Home</a></li>
+                                <li class="active">About</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Banner Section -->
+
+
+        <section class="featured-section featured-section__about-two">
+            <div class="auto-container">
+                {% for rs in about %}
+                <div class="row clearfix">
+                    <!--Left Column-->
+                    <div class="left-col col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms"
+                            style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
+                            <div class="image-box"><img src="{{rs.image.url}}" alt="{{rs.alt}}"></div>
+                        </div>
+                    </div>
+                    <!--Right Column-->
+                    <div class="right-col col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="sec-title">
+                                <h2>{{rs.title}}<span class="dot">.</span></h2>
+                                <div class="lower-text">{{rs.detail | safe}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+
+        {% comment %} <section class="team-three team-three__about-two">
+            <div class="auto-container">
+                <div class="sec-title centered">
+                    <h2>Meet the team of experts<span class="dot">.</span></h2>
+                </div>
+                {% for rs in team %}
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="team-card-three">
+                            <div class="team-card-three__inner">
+                                <div class="team-card-three__image">
+                                    <img src="{{rs.image.url}}" alt="{{rs.alt}}">
+                                </div><!-- /.team-card-three__image -->
+                                <div class="team-card-three__content">
+                                    <h5 class="team-card-three__name">{{rs.name}}</h5>
+                                    <div class="team-card-three__designation">{{rs.designation}}</div>
+                                </div><!-- /.team-card-three__content -->
+                                <div class="team-card-three__hover">
+                                    <h5 class="team-card-three__name">{{rs.name}}</h5>
+                                    <div class="team-card-three__designation">{{rs.designation}}</div>
+                                    <ul class="team-card-three__social clearfix m-0 list-unstyled">
+                                        <li><a href="{{rs.facebook}}" target="_blank"><span class="fab fa-facebook-square"></span></a></li>
+                                        <li><a href="{{rs.twitter}}" target="_blank"><span class="fab fa-twitter"></span></a></li>
+                                        <li><a href="{{rs.linkedin}}" target="_blank"><span class="fab fa-linkedin"></span></a></li>
+                                        <li><a href="{{rs.instagram}}" target="_blank"><span class="fab fa-instagram"></span></a></li>
+                                    </ul>
+                                </div><!-- /.team-card-three__content -->
+                            </div><!-- /.team-card-three__inner -->
+                        </div><!-- /.team-card-three -->
+                    </div>
+                </div><!-- /.row -->
+                {% endfor %}
+            </div><!-- /.auto-container -->
+        </section> {% endcomment %}
+
+
+        <!-- Parallax Section -->
+        <section class="parallax-section jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% 80%">
+            <!-- <div class="image-layer" style="background-image: url(images/background/image-2.jpg);"></div> -->
+            <img src="images/background/image-2.jpg" alt="" class="jarallax-img">
+            <div class="auto-container">
+                <div class="content-box">
+                    <div class="icon-box"><span class="flaticon-app-development"></span></div>
+                    <h2>Great things in business are never done by one person. <span>They’re done by a team of
+                            people.</span></h2>
+                </div>
+            </div>
+        </section>
+        <!-- End Funfacts Section -->
+
+        <!-- <section class="testimonials-four">
+            <div class="auto-container">
+                <div class="testimonials-four__block__top">
+                    <div class="sec-title">
+                        <h2>What our customers are
+                            talking about<span class="dot">.</span></h2>
+                    </div>
+
+                    <div class="block-text">
+                        <p>There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered alteration in some form, by injected
+                            humour, or randomised.</p>
+                    </div>
+                </div>
+                <div class="testimonials-four-carousel owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="testimonials-four-card">
+                            <div class="testimonials-four-card__content">
+                                <p>There are many variations of passages of lorem ipsum available but the
+                                    majority have suffered alteration in some form, by injected humour,</p>
+                                <div class="name">Sarah albert</div>
+                                <div class="designation">Director</div>
+                            </div>
+                            <div class="image">
+                                <img src="images/resource/author-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonials-four-card">
+                            <div class="testimonials-four-card__content">
+                                <p>There are many variations of passages of lorem ipsum available but the
+                                    majority have suffered alteration in some form, by injected humour,</p>
+                                <div class="name">Mike hardson</div>
+                                <div class="designation">Director</div>
+                            </div>
+                            <div class="image">
+                                <img src="images/resource/author-2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonials-four-card">
+                            <div class="testimonials-four-card__content">
+                                <p>There are many variations of passages of lorem ipsum available but the
+                                    majority have suffered alteration in some form, by injected humour,</p>
+                                <div class="name">Shirley Smith</div>
+                                <div class="designation">Director</div>
+                            </div>
+                            <div class="image">
+                                <img src="images/resource/author-3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonials-four-card">
+                            <div class="testimonials-four-card__content">
+                                <p>There are many variations of passages of lorem ipsum available but the
+                                    majority have suffered alteration in some form, by injected humour,</p>
+                                <div class="name">Sarah albert</div>
+                                <div class="designation">Director</div>
+                            </div>
+                            <div class="image">
+                                <img src="images/resource/author-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonials-four-card">
+                            <div class="testimonials-four-card__content">
+                                <p>There are many variations of passages of lorem ipsum available but the
+                                    majority have suffered alteration in some form, by injected humour,</p>
+                                <div class="name">Mike hardson</div>
+                                <div class="designation">Director</div>
+                            </div>
+                            <div class="image">
+                                <img src="images/resource/author-2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonials-four-card">
+                            <div class="testimonials-four-card__content">
+                                <p>There are many variations of passages of lorem ipsum available but the
+                                    majority have suffered alteration in some form, by injected humour,</p>
+                                <div class="name">Shirley Smith</div>
+                                <div class="designation">Director</div>
+                            </div>
+                            <div class="image">
+                                <img src="images/resource/author-3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonials-four-card">
+                            <div class="testimonials-four-card__content">
+                                <p>There are many variations of passages of lorem ipsum available but the
+                                    majority have suffered alteration in some form, by injected humour,</p>
+                                <div class="name">Sarah albert</div>
+                                <div class="designation">Director</div>
+                            </div>
+                            <div class="image">
+                                <img src="images/resource/author-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonials-four-card">
+                            <div class="testimonials-four-card__content">
+                                <p>There are many variations of passages of lorem ipsum available but the
+                                    majority have suffered alteration in some form, by injected humour,</p>
+                                <div class="name">Mike hardson</div>
+                                <div class="designation">Director</div>
+                            </div>
+                            <div class="image">
+                                <img src="images/resource/author-2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonials-four-card">
+                            <div class="testimonials-four-card__content">
+                                <p>There are many variations of passages of lorem ipsum available but the
+                                    majority have suffered alteration in some form, by injected humour,</p>
+                                <div class="name">Shirley Smith</div>
+                                <div class="designation">Director</div>
+                            </div>
+                            <div class="image">
+                                <img src="images/resource/author-3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section> -->
+
+        <section class="sponsors-section sponsors-section__about-two">
+            <div class="sponsors-outer">
+                <div class="auto-container">
+                    <div class="sponsors-carousel owl-carousel owl-theme">
+                        {% for rs in clients %}
+                        <div class="slide-item">
+                            <figure class="image-box"><img src="{{rs.image.url}}" alt="{{rs.alt}}"></figure>
+                        </div>
+                    {% endfor %}
+                    </div><!-- /.sponsors-carousel -->
+                </div><!-- /.auto-container -->
+            </div><!-- /.sponsors-outer -->
+        </section><!-- /.sponsors-section -->
+
+{% endblock %}

@@ -2,10 +2,23 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.views import generic
 
-from home.models import Service
+from .models import About, Clients, Company, Service, Strategy
+from project.models import Project
 
 def home(request):
-    return HttpResponse("Hello Django")
+    company = Company.objects.get(pk=1)
+    about = About.objects.all()
+    service = Service.objects.order_by('-created')[:4]
+    projects = Project.objects.order_by('-created')[:6]
+    clients = Clients.objects.all()
+    return render(request, 'index.html', {'company': company, 'about': about, 'service': service, 'projects': projects, 'clients': clients})
+
+
+def about(request):
+    company = Company.objects.get(pk=1)
+    about = About.objects.all()
+    clients = Clients.objects.all()
+    return render(request, 'about.html', {'company': company, 'about': about, 'clients': clients})
 
 
 def service(request):
